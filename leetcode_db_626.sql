@@ -75,10 +75,10 @@ SELECT
 FROM
 (
  SELECT
-       id
+        id
        ,student
        ,lead(student,1,NULL) OVER (ORDER BY ID) swap_student
-       ,lag(student,1,NULL) over (order by id)  swap_prev_student
+       ,lag(student,1,NULL) OVER (ORDER BY id)  swap_prev_student
  FROM
      seat 
 ORDER BY 1 
